@@ -218,8 +218,8 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = next;
         return next->pair;
     }
-    key = aux->pair->key;
-    padre = aux->parent;
+    void * key = aux->pair->key;
+    TreeNode * padre = aux->parent;
     while(padre != NULL && padre->key < key){
         padre = padre->parent;
     }
