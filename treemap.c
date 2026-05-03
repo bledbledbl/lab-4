@@ -178,9 +178,13 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         free(node);
         return;
     }
-    
 
-    
+    TreeNode * minimo = minimun(node->right);
+    node->pair->key = minimo->pair->key;
+    node->pair->value = minimo->pair->value;
+
+    removeNode(tree, minimo);
+    return;
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
