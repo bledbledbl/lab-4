@@ -220,7 +220,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     void * key = aux->pair->key;
     TreeNode * padre = aux->parent;
-    while(padre != NULL && padre->key < key){
+    while(padre != NULL && padre->pair->key < key){
         padre = padre->parent;
     }
     
